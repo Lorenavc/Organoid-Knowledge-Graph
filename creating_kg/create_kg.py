@@ -18,7 +18,7 @@ except Exception as e:
     print(f"Connection failed: {e}")
 
 # Read the CSV file
-df = pd.read_csv('ArrayExpress_dataset_metadata.csv')
+df = pd.read_csv('ArrayExpress_metadata.csv')
 
 # Filter the DataFrame to include only rows with year 2019 and later
 #df = df[df['year'] >= 2019]
