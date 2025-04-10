@@ -72,5 +72,5 @@ The script [integrate.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/b
 
 The script [GEO_ID_download.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/supplementary_scripts/GEO_ID_download.py) was created to extract GEO (Gene Expression Omnibus) accession IDs from the NCBI database based on a specific search query ('(((organoid[Description]) AND Homo sapiens[Organism]) AND ("2019"[Publication Date] : "3000"[Publication Date])) NOT cancer') and save them to a .txt file as a comma-separated list.
 
-These IDs extracted and saved by the GEO_ID_download.py script can be directly used in the R script [GEO_file_download.R](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/supplementary_scripts/GEO_file_download.R) to download GEO dataset supplementary files, which often contain raw count data.
+These IDs extracted and saved by the GEO_ID_download.py script were directly used in the R script [GEO_file_download.R](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/supplementary_scripts/GEO_file_download.R) to download GEO dataset supplementary files, which often contain raw count data.
 
