@@ -14,7 +14,7 @@ Organoid Knowledge Graph (Organoid KG) was created in the neo4j database and emc
 | Perturbagen | any drugs, genetic modifications, infections, or other treatments that were applied to the organoid | BioAssay Ontology (BAO), National Center for Biotech Institute Thesaurus (NCIT), Ontology of Genes and Genomes (OGG), Systematized Nomenclature of Medicine Clinical Terms (SNOMED), PRotein Ontology (PR), Ontology for MicroRNA Target (OMIT)  |
 | Protocol | the main growth protocol used to create the organoid | Protocol Reference used | 
 
-## 🌱 Getting Started: Environment Setup
+## 🌱 Environment Setup
 
 ### 1. Clone the Repository
 
@@ -40,7 +40,7 @@ docker run -d --name neo4j-instance \
   neo4j:latest
 ```
 
-## Creating Organoid KG
+## 🧑‍💻 Creating Organoid KG
 
 ### 4. Running the Script
 
@@ -52,6 +52,7 @@ Enter your Neo4j password: yourpassword
 
 After inputting your username and password, open the http://localhost:7474 in your browser to access the NEo4j Browser interface.
 
+### 5. Visualizing KG
 You can run the following Cypher query to visualize the entire graph:
 
 ```cypher
@@ -60,10 +61,10 @@ OPTIONAL MATCH (n)-[r]->(m)
 RETURN n, r, m
 ```
 
-## Integrating Organoid KG with PrimeKG 
+## 🧩 Integrating Organoid KG with PrimeKG 
 
 
-## Supplementary Material
+## 📄 Supplementary Material
 
 
 
