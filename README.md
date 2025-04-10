@@ -2,7 +2,7 @@
 
 Organoid Knowledge Graph (Organoid KG) was created in the neo4j database and emcompasses 147 human organoid multiomics datasets from Array Express; it includes nodes such as organoid type, source of organoid, assay method, perturbagen applied, and main organoid growth protocol(s) used. Additionally, we integrated our organoid knowledge graph with PrimeKG, a biomedical knowledge graph, to make the combined resource more comprehensive and to showcase the versatility of a graph structure. 
 
-![Alt text]([images/Organoid KG example nodes.png](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/images/Organoid%20KG%20example%20nodes.png))
+![Alt text](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/images/Organoid%20KG%20example%20nodes.png)
 
 ## Organoid KG Metadata 
 
