@@ -16,6 +16,40 @@ Organoid Knowledge Graph (Organoid KG) was created in the neo4j database and emc
 
 ## Environment Setup
 
+## Getting Started: Environment Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Lorenavc/Organoid-Knowledge-Graph.git
+cd Organoid-Knowledge-Graph
+```
+
+### 2. Install Dependencies
+
+
+```
+pip install -r requirements.txt
+
+```
+
+### 3. Start Neo4j (using Docker)
+
+```
+docker run -d --name neo4j-instance \
+  -p 7474:7474 -p 7687:7687 \
+  -e NEO4J_AUTH=neo4j/yourpassword \
+  -v /path/to/your/kg.csv:/data/kg.csv \
+  neo4j:latest
+```
+### 4. Running the Script
+
+When you run the script, you’ll be prompted to enter your Neo4j username and password:
+bash
+Enter your Neo4j username: neo4j
+Enter your Neo4j password: yourpassword
+
+
 ## Building Organoid KG
 
 ## Integrating Organoid KG with PrimeKG 
