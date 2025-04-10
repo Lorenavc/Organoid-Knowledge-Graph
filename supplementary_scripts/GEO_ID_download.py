@@ -7,7 +7,7 @@ def fetch_geo_accession_ids(query):
         "db": "gds",
         "term": query,
         "retmode": "xml",
-        "retmax": 20000
+        "retmax": 20000     # sets maximum amount of results to be returned
     }
     
     response = requests.get(base_url, params=params)
