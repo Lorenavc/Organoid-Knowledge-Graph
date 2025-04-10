@@ -45,8 +45,8 @@ docker run -d --name neo4j-instance \
 
 When you run the script, you’ll be prompted to enter your Neo4j username and password:
 
-bash
-Enter your Neo4j username: neo4j
+bash  
+Enter your Neo4j username: neo4j  
 Enter your Neo4j password: yourpassword
 
 
