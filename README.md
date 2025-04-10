@@ -41,18 +41,29 @@ docker run -d --name neo4j-instance \
   -v /creating_kg/ArrayExpress_metadata.csv:/data/ArrayExpress_metadata.csv \
   neo4j:latest
 ```
+
+## Creating Organoid KG
+
 ### 4. Running the Script
 
-When you run the script, you’ll be prompted to enter your Neo4j username and password:
+When you run the script [create_kg.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/creating_kg/create_kg.py), you’ll be prompted to enter your Neo4j username and password:
 
 bash  
 Enter your Neo4j username: neo4j  
 Enter your Neo4j password: yourpassword
 
+After inputting your username and password, open the http://localhost:7474 in your browser to access the NEo4j Browser interface.
 
-## Building Organoid KG
+You can run the following Cypher query to visualize the entire graph:
+
+```cypher
+MATCH (n)
+OPTIONAL MATCH (n)-[r]->(m)
+RETURN n, r, m
+```
 
 ## Integrating Organoid KG with PrimeKG 
+
 
 ## Supplementary Material
 
