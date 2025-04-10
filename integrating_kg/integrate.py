@@ -8,7 +8,7 @@ USERNAME = input("Enter Neo4j username: ")
 PASSWORD = getpass.getpass("Enter Neo4j password: ")
 
 # Load the CSV
-csv_file = "uni_filt_primekg.csv"  # Ensure the path is correct
+csv_file = "uni_filt_primekg.csv"
 df = pd.read_csv(csv_file)
 
 # Function to insert data into Neo4j
