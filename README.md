@@ -33,11 +33,7 @@ pip install -r requirements.txt
 ### 3. Start Neo4j (using Docker)
 
 ```bash
-docker run -d --name neo4j-instance \
-  -p 7474:7474 -p 7687:7687 \
-  -e NEO4J_AUTH=neo4j/yourpassword \
-  -v /creating_kg/ArrayExpress_metadata.csv:/data/ArrayExpress_metadata.csv \
-  neo4j:latest
+docker run -d --name neo4j-instance -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo4j/yourpassword -v /creating_kg/ArrayExpress_metadata.csv:/data/ArrayExpress_metadata.csv neo4j:latest
 ```
 
 ## 🧑‍💻 Creating Organoid KG
@@ -50,7 +46,7 @@ bash
 Enter your Neo4j username: neo4j  
 Enter your Neo4j password: yourpassword
 
-After inputting your username and password, open the http://localhost:7474 in your browser to access the NEo4j Browser interface.
+After inputting your username and password, open the http://localhost:7474 in your browser to access the Neo4j Browser interface.
 
 ### 5. Visualizing KG
 You can run the following Cypher query to visualize the entire graph:
