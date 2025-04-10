@@ -63,6 +63,7 @@ RETURN n, r, m
 
 ## 🧩 Integrating Organoid KG with PrimeKG 
 
+First, the [filter_primekg.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/filter_primekg.py) script will create a filtered version of the PrimeKG csv, including only node terms that match those in Organoid KG. It will save them unidirectionally since Organoid KG is unidirectional. The script will also provide comments to...
 
 ## 📄 Supplementary Material
 
