@@ -63,9 +63,18 @@ RETURN n, r, m
 
 ## 🧩 Integrating Organoid KG with PrimeKG 
 
-First, the [filter_primekg.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/filter_primekg.py) script will create a filtered version of the PrimeKG csv, including only node terms that match those in Organoid KG. It will save them unidirectionally since Organoid KG is unidirectional. The script will also provide comments to...
+### 6. Filter PrimeKG csv
 
-## 📄 Supplementary Material
+To save computational time, the [filter_primekg.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/filter_primekg.py) script will create a filtered version of the PrimeKG csv, including only node terms that match those in Organoid KG. It will save them unidirectionally since Organoid KG is unidirectional. The resulting file is [uni_filt_primekg.csv](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/uni_filt_primekg.csv). The script also provides comments to guide you if filtering your csv instead of PrimeKG's. 
+
+### 7. Integrate Organoid KG and PrimeKG in Neo4j 
+
+The script [integrate.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/integrate.py) reads the Organoid KG csv and the filtered PrimeKG csv files, and constructs a Cypher query that merges nodes (x and y) based on their names, sets properties and adds labels to these nodes, and creates relationships between nodes in Neo4j.
 
 
+## 📄 Supplementary Scripts
+
+The script [GEO_ID_download.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/supplementary_scripts/GEO_ID_download.py) was created to extract GEO (Gene Expression Omnibus) accession IDs from the NCBI database based on a specific search query ('(((organoid[Description]) AND Homo sapiens[Organism]) AND ("2019"[Publication Date] : "3000"[Publication Date])) NOT cancer') and save them to a .txt file as a comma-separated list.
+
+These IDs extracted and saved by the GEO_ID_download.py script can be directly used in the R script [GEO_file_download.R](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/supplementary_scripts/GEO_file_download.R) to download GEO dataset supplementary files, which often contain raw count data.
 
