@@ -14,9 +14,7 @@ Organoid Knowledge Graph (Organoid KG) was created in the neo4j database and emc
 | Perturbagen | any drugs, genetic modifications, infections, or other treatments that were applied to the organoid | BioAssay Ontology (BAO), National Center for Biotech Institute Thesaurus (NCIT), Ontology of Genes and Genomes (OGG), Systematized Nomenclature of Medicine Clinical Terms (SNOMED), PRotein Ontology (PR), Ontology for MicroRNA Target (OMIT)  |
 | Protocol | the main growth protocol used to create the organoid | Protocol Reference used | 
 
-## Environment Setup
-
-## Getting Started: Environment Setup
+## 🌱 Getting Started: Environment Setup
 
 ### 1. Clone the Repository
 
