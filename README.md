@@ -11,7 +11,7 @@ Organoid Knowledge Graph (Organoid KG) was created in the neo4j database and emc
 | Organoid Type         | the specific organ or tissue that the organoid represents or is derived from   | UBERON |
 | Assay Method | the experimental techniques used to measure and analyze biological molecules at a large scale, such as RNA-seq, DNA-seq, ATAC-seq, etc        | Experimental Factor Ontology (EFO) |
 | Organoid Source      | the type of cells utilized to grow the organoid  | Brenda Tissue Ontology (BTO) |
-| Perturbagen | any drugs, genetic modifications, infections, or other treatments that were applied to the organoid | BioAssay Ontology (BAO), National Center for Biotech Institute Thesaurus (NCIT), Ontology of Genes and Genomes (OGG), Systematized Nomenclature of Medicine Clinical Terms (SNOMED), PRotein Ontology (PR), Ontology for MicroRNA Target (OMIT)  |
+| Perturbagen | any drugs, genetic modifications, infections, or other treatments that were applied to the organoid | BioAssay Ontology (BAO), National Center for Biotech Institute Thesaurus (NCIT), Ontology of Genes and Genomes (OGG), Systematized Nomenclature of Medicine Clinical Terms (SNOMED), PRotein Ontology (PR), Ontology for MicroRNA Target (OMIT), DrugBank  |
 | Protocol | the main growth protocol used to create the organoid | Protocol Reference used | 
 
 ## 🌱 Environment Setup
