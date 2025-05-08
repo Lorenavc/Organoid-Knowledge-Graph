@@ -1,0 +1,7 @@
+MATCH (d:Dataset)-[:HAS_ORGANOID_TYPE]->(o:OrganoidType),
+      (d)-[:HAS_PERTURBAGEN]->(p:Perturbagen)
+RETURN o.name AS organoidType, 
+       p.name AS perturbagen, 
+       COUNT(DISTINCT d) AS countOfDatasets,
+       COLLECT(DISTINCT d.name) AS datasetNames
+ORDER BY organoidType, countOfDatasets DESC
