@@ -1,0 +1,162 @@
+# Supplementary Table 1
+
+## Knowledge Graph Nodes
+
+### Assay
+- RNA-seq of coding RNA  
+- RNA-seq of total RNA  
+- scATAC-seq  
+- RNA-seq of coding RNA from single cells  
+- single nucleus RNA sequencing  
+- transcription profiling by array  
+- methylation profiling by array  
+- CROP-seq  
+- DNA-seq  
+- RNA-seq of non coding RNA from single cells  
+- spatial transcriptomics by high-throughput sequencing  
+- methylation profiling by high throughput sequencing  
+- microRNA profiling by high throughput sequencing  
+- ATAC-seq  
+- ChIP-seq  
+
+### Organoid_source
+- hiPSC cell  
+- hESC cell  
+- primary cell  
+- hESC cell-hiPSC cell  
+- endothelial cell line  
+
+### Organoid_type
+- colon  
+- brain  
+- kidney  
+- retina  
+- lung  
+- placenta  
+- thymus  
+- intestine  
+- dental follicle  
+- thyroid gland  
+- spinal cord  
+- fallopian tube  
+- gallbladder  
+- bile duct  
+- liver  
+- pancreas  
+- breast  
+- heart  
+- uterus  
+- stomach  
+- skin  
+- spleen  
+- yolk sac  
+
+### Perturbagen
+- gene knockout  
+- CRISPR/Cas9 method  
+- gene overexpression  
+- Gefitinib  
+- Dibenzazepines  
+- Afimoxifene  
+- Fluorouracil  
+- Doxorubicin  
+- gene knock in  
+- Escherichia coli  
+- Salmonella enterica subsp. enterica serovar Typhimurium  
+- Mirdametinib  
+- Estrogens  
+- Progesterone  
+- XAV939  
+- lentivirus infection  
+- Sonic Hedgehog Protein  
+- Epiregulin  
+- CSF1  
+- CSF2  
+- XCL1  
+- CCL5  
+- Interferon Gamma  
+- Tumor necrosis factor alpha (substance)  
+- EGF  
+- noggin  
+- R-Spondin-2  
+- mutated  
+- Benzo(a)pyrene  
+- 2,2',4,4',5,5'-hexachlorobiphenyl  
+- West Nile virus  
+- CHIR 99021  
+- GSK-LSD1  
+- Human astrovirus 1  
+- Transforming Growth Factor Beta-1  
+- GSK343  
+- Frameshift Mutation  
+- Nicotinamide  
+- point mutated  
+- Interferon Alpha-2  
+- Baricitinib  
+- Severe acute respiratory syndrome coronavirus 2  
+
+### Protocol
+- Regents et al., 2019  
+- Lancaster et al., 2013  
+- STEMdiff™ Cerebral Organoid Kit, StemCell Technologies 08570  
+- Nikolic et al., 2017  
+- Turco et al., 2018  
+- Montel-Hagen et al. 2019  
+- Lancaster et al., 2014  
+- Dye et al., 2016a, 2015  
+- Hemeryck et al., 2022  
+- Cowan et al., 2020  
+- Kuwahara et al., 2015 (adapted)  
+- Forbester et al., 2015  
+- Tysoe at al., 2019  
+- Li et al., 2023  
+- Toshiro et al., 2011  
+- Lancaster and Knoblich., 2014  
+- Vancamelbeke et al., 2020  
+- Spence et al., 2011  
+- McCracken et al., 2011  
+- Kyungtae et al., 2021  
+- Bauersachs et al., 2021  
+- Cheung et al., 2021  
+- Yu-Hwai et al. 2018  
+- Turco et al. 2017  
+- Childs et al., 2022  
+- Huch et al., 2015  
+- Fleck et al., 2021  
+- Eastlake et al., 2019  
+- Ptasinski et al., 2023  
+- Turco et al 2018  
+- Sheridan et al 2020  
+- Dame et al., 2018  
+- Tsai et al., 2018  
+- Fordham et al., 2013  
+- Forbester et al., 2016  
+- Howell et al., 2018  
+- Takasato et al., 2015  
+- Turco et al., 2017  
+- Boretto et al., 2017  
+- Conchola et al., 2023  
+- Capeling et al., 2022  
+- Childs et al., 2023  
+- Tsai et al., 2017  
+- Watson et al., 2014  
+- Johnstone et al., 2019  
+- Romitti et al., 2022  
+- Pasca et al., 2015  
+- Zwiggelaar et al., 2020  
+- Xue et al., 2021  
+- Sato et al., 2011  
+- Davis et al., 2022  
+- Takasato et al, 2015  
+- Bantounas et al, 2018  
+- Bantounas et al 2021  
+- Vanova et al., 2023  
+- Bartfeld et al., 2015  
+- Villa et al., 2022  
+- van den Berg et al., 2018  
+- Kanber et al., 2022  
+- Dye et al., 2015  
+- Gonzalez-Cordero et al., 2017  
+- Capeling et al., 2019  
+- Linnemann et al., 2015  
+- Stebbing et al., 2021 
