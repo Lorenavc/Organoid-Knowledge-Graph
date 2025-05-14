@@ -38,7 +38,7 @@ docker run -d --name neo4j-instance -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo4
 
 ## 🧑‍💻 Creating Organoid KG
 
-### 4. Running the Script
+### 4. Run the Script
 
 When you run the script [create_kg.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/creating_kg/create_kg.py), you’ll be prompted to enter your Neo4j username and password:
 
@@ -48,21 +48,37 @@ Enter your Neo4j password: yourpassword
 
 After inputting your username and password, open the http://localhost:7474 in your browser to access the Neo4j Browser interface.
 
-### 5. Visualizing KG
-You can run the following Cypher query to visualize the entire graph:
+### 5. Load Organoid KG
+You can run the following Cypher query to load the entire graph:
 
 ```cypher
 MATCH (n)
 OPTIONAL MATCH (n)-[r]->(m)
 RETURN n, r, m
 ```
+## 📊 Organoid KG-Facilitated Visualization
 
-## 🧩 Integrating Organoid KG with PrimeKG 
+### Query Organoid KG 
+You can run the following Cypher query to recreate our use case: 
+```cypher
+MATCH (d:Dataset)-[:HAS_ORGANOID_TYPE]->(o:OrganoidType),
+      (d)-[:HAS_PERTURBAGEN]->(p:Perturbagen)
+RETURN o.name AS organoidType, 
+       p.name AS perturbagen, 
+       COUNT(DISTINCT d) AS countOfDatasets,
+       COLLECT(DISTINCT d.name) AS datasetNames
+ORDER BY organoidType, countOfDatasets DESC
+```
+### Run the Script
 
-### 6. Filter PrimeKG csv
+The script [visualization_sankey.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/visualization/visualization_sankey.py) will prompt you to select two columns or metadata to be visualized, and creates a Sankey diagram of them. In this use case, we chose to visualize the perturbagens applied to different organoid types across datasets. 
+
+## 🧩 Integration of Organoid KG with PrimeKG 
+
+### Filter PrimeKG csv
 Prior to integration, we examined the PrimeKG csv file, which includes columns used to define edges, nodes, and node properties. Organoid KG dataset nodes have a name property, so we used Bash grep commands to search for Organoid KG node names within the PrimeKG csv file. We found matches corresponding to the ‘organoid type’ and ‘perturbagen’ node types. Thus, to save computational time, the [filter_primekg.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/filter_primekg.py) script uses node names corresponding to the ‘organoid type’ and ‘perturbagen’ node types to filter the original PrimeKG csv. The resulting file is [uni_filt_primekg.csv](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/uni_filt_primekg.csv). The script also provides comments to guide you if filtering a csv other than PrimeKG's. 
 
-### 7. Integrate Organoid KG and PrimeKG in Neo4j 
+### Run the Script
 
 The script [integrate.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/integrate.py) connects to a Neo4j database containing the Organoid KG, reads the filtered PrimeKG csv, and constructs a Cypher query that merges nodes based on their node names, sets node properties and classes, and creates relationships between nodes.
 
