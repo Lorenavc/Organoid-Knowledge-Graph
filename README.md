@@ -46,7 +46,7 @@ bash
 Enter your Neo4j username: neo4j  
 Enter your Neo4j password: yourpassword
 
-After inputting your username and password, open the http://localhost:7474 in your browser to access the Neo4j Browser interface.
+After inputting your username and password, open the localhost in your browser to access the Neo4j Browser interface.
 
 ### 5. Load Organoid KG
 You can run the following Cypher query to load the entire graph:
