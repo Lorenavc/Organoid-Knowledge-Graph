@@ -60,17 +60,16 @@ RETURN n, r, m
 ## 🧩 Integrating Organoid KG with PrimeKG 
 
 ### 6. Filter PrimeKG csv
-
-To save computational time, the [filter_primekg.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/filter_primekg.py) script will create a filtered version of the PrimeKG csv, including only node terms that match those in Organoid KG. It will save them unidirectionally since Organoid KG is unidirectional. The resulting file is [uni_filt_primekg.csv](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/uni_filt_primekg.csv). The script also provides comments to guide you if filtering your csv instead of PrimeKG's. 
+Prior to integration, we examined the PrimeKG csv file, which includes columns used to define edges, nodes, and node properties. Organoid KG dataset nodes have a name property, so we used Bash grep commands to search for Organoid KG node names within the PrimeKG csv file. We found matches corresponding to the ‘organoid type’ and ‘perturbagen’ node types. Thus, to save computational time, the [filter_primekg.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/filter_primekg.py) script uses node names corresponding to the ‘organoid type’ and ‘perturbagen’ node types to filter the original PrimeKG csv. The resulting file is [uni_filt_primekg.csv](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/uni_filt_primekg.csv). The script also provides comments to guide you if filtering a csv other than PrimeKG's. 
 
 ### 7. Integrate Organoid KG and PrimeKG in Neo4j 
 
-The script [integrate.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/integrate.py) reads the Organoid KG csv and the filtered PrimeKG csv files, and constructs a Cypher query that merges nodes (x and y) based on their names, sets properties and adds labels to these nodes, and creates relationships between nodes in Neo4j.
+The script [integrate.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/integrating_kg/integrate.py) connects to a Neo4j database containing the Organoid KG, reads the filtered PrimeKG csv, and constructs a Cypher query that merges nodes based on their node names, sets node properties and classes, and creates relationships between nodes.
 
 
 ## 📄 Supplementary Scripts
 
 The script [GEO_ID_download.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/supplementary_scripts/GEO_ID_download.py) was created to extract GEO (Gene Expression Omnibus) accession IDs from the NCBI database based on a specific search query ('(((organoid[Description]) AND Homo sapiens[Organism]) AND ("2019"[Publication Date] : "3000"[Publication Date])) NOT cancer') and save them to a .txt file as a comma-separated list.
 
-These IDs extracted and saved by the GEO_ID_download.py script were directly used in the R script [GEO_file_download.R](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/supplementary_scripts/GEO_file_download.R) to download GEO dataset supplementary files, which often contain raw count data.
+These IDs extracted and saved by the GEO_ID_download.py script were used in the R script [GEO_file_download.R](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/supplementary_scripts/GEO_file_download.R) to download GEO dataset supplementary files, which often contain raw count data.
 
