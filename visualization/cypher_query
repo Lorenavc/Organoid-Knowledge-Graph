@@ -1,4 +1,4 @@
-MATCH (d:Dataset)-[:HAS_ORGANOID_TYPE]->(o:OrganoidType),
+MATCH (d:Dataset)-[:RELATED_TO]->(o:Organoid_type),
       (d)-[:HAS_PERTURBAGEN]->(p:Perturbagen)
 RETURN o.name AS organoidType, 
        p.name AS perturbagen, 
