@@ -61,7 +61,7 @@ RETURN n, r, m
 ### Query Organoid KG 
 You can run the following Cypher query to recreate our use case: 
 ```cypher
-MATCH (d:Dataset)-[:HAS_ORGANOID_TYPE]->(o:OrganoidType),
+MATCH (d:Dataset)-[:RELATED_TO]->(o:Organoid_type),
       (d)-[:HAS_PERTURBAGEN]->(p:Perturbagen)
 RETURN o.name AS organoidType, 
        p.name AS perturbagen, 
