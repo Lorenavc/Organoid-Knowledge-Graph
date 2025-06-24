@@ -22,15 +22,20 @@ Organoid Knowledge Graph (Organoid KG) was created in the neo4j database and emc
 git clone https://github.com/Lorenavc/Organoid-Knowledge-Graph.git
 cd Organoid-Knowledge-Graph
 ```
+### 2. Create a Vistual Environment (Recommended)
 
-### 2. Install Dependencies
+```bash
+python -m venv venv
+source venv/bin/activate  # Use `venv\Scripts\activate` on Windows
+```
 
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Start Neo4j (using Docker)
+### 4. Start Neo4j (using Docker)
 
 ```bash
 docker run -d --name neo4j-instance -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo4j/yourpassword -v /creating_kg/ArrayExpress_metadata.csv:/data/ArrayExpress_metadata.csv neo4j:latest
@@ -38,7 +43,11 @@ docker run -d --name neo4j-instance -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo4
 
 ## 🧑‍💻 Creating Organoid KG
 
-### 4. Run the Script
+### 5. Run the Script
+
+```bash
+python3 creating_kg/create_kg.py
+```
 
 When you run the script [create_kg.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/creating_kg/create_kg.py), you’ll be prompted to enter your Neo4j username and password:
 
@@ -48,7 +57,7 @@ Enter your Neo4j password: yourpassword
 
 After inputting your username and password, open the localhost in your browser to access the Neo4j Browser interface.
 
-### 5. Load Organoid KG
+### 6. Load Organoid KG
 You can run the following Cypher query to load the entire graph:
 
 ```cypher
