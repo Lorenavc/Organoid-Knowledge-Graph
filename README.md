@@ -69,6 +69,9 @@ RETURN o.name AS organoidType,
        COLLECT(DISTINCT d.name) AS datasetNames
 ORDER BY organoidType, countOfDatasets DESC
 ```
+### Export CSV from Neo4j
+After the result table loads, click the 3 vertical dots (︙) in the top-right corner of the result pane.
+
 ### Run the Script
 
 The script [visualization_sankey.py](https://github.com/Lorenavc/Organoid-Knowledge-Graph/blob/main/visualization/visualization_sankey.py) will prompt you to select two columns or metadata to be visualized, and creates a Sankey diagram of them. In this use case, we chose to visualize the perturbagens applied to different organoid types across datasets. 
