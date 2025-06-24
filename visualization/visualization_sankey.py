@@ -39,9 +39,12 @@ fig = go.Figure(data=[go.Sankey(
     ))])
 
 fig.update_layout(title_text="Sankey Diagram", font_size=12)
-try:
-    fig.show()
-except:
-    fig.write_html("sankey_diagram.html")
-    print("Couldn't open browser. Diagram saved as 'sankey_diagram.html'")
+
+# Save HTML file
+html_filename = "sankey_diagram.html"
+fig.write_html(html_filename)
+print(f"\nSaved Sankey diagram as '{html_filename}'.")
+
+# Show diagram in browser
+fig.show()
 
